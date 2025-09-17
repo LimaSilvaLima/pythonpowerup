@@ -1,27 +1,25 @@
 import pyautogui
+import time
 
-pyautogui.PAUSE = 0.5
-#abrir navegador
+pyautogui.PAUSE = 1.5
+
+# 1. Abrir o navegador
 pyautogui.press("win")
 pyautogui.write("chrome")
 pyautogui.press("enter")
 
-#Digitar o site
+# 2. Entrar no site
+time.sleep(3) # Espera o navegador abrir completamente
 pyautogui.write("https://dlp.hashtagtreinamentos.com/python/intensivao/login")
 pyautogui.press("enter")
+time.sleep(3) # Espera a página carregar
 
-#esperar 3 segundos
-pyautogui.sleep(3)
-
-#fazer  login
-#pyautogui.position (posiçao na tela)
-pyautogui.click(x=649, y=477)
+# 3. Fazer login
+pyautogui.press("tab") # Navega para o campo de email
 pyautogui.write("pythonimpressionador@gmail.com")
 
 
 
-# https://dlp.hashtagtreinamentos.com/python/intensivao/login
-# fazer login
 # importar base de dados
 # cadastrar um produto
 # repetir cadastramento todos os produtos
@@ -33,6 +31,3 @@ pyautogui.write("pythonimpressionador@gmail.com")
 # pyautogui.click -> clicar em algum lugar
 # pyautogui.press -> apertar uma tecla
 # pyautogui.write -> escrever um texto
-
-
-
